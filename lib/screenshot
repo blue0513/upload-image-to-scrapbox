@@ -2,7 +2,6 @@
 
 require 'rbscreenshot'
 require 'rmagick'
-require 'curb'
 
 ARGV.each_with_index do |arg, i|
   if i == 0
