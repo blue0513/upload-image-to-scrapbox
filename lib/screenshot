@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'rbscreenshot'
+require 'rmagick'
+require 'curb'
+
+ARGV.each_with_index do |arg, i|
+  if i == 0
+    @url = arg
+  end
+end
+
+# # urlのスクリーンショットを取る
+result_file = RbScreenShot.take_part(@url)
+
+# ページが更新されているか画像の差分で判断する
+# img = Magick::Image.read("./#{filename}.png").first
+# img.difference(img)
+
+p result_file
